@@ -1,0 +1,8 @@
+name: MySQL
+description: MySQL Database Server
+category: Database
+tags:
+  - database
+  - mysql
+type: local
+default_service_version: 1

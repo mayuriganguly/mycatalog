@@ -1,0 +1,13 @@
+{
+    "parameters": [
+        {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "description": "MYSQL_ROOT_PASSWORD",
+            "type": "string",
+            "default": "root123",
+            "example": "root123",
+            "required": true,
+            "secret": false
+        }
+    ]
+}

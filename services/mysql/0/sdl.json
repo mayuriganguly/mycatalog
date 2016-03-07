@@ -1,0 +1,45 @@
+{
+    "name": "mysql",
+    "version": "5.5",
+    "vendor": "mysql",
+    "components": [
+        {
+            "name": "mysql",
+            "version": "5.5",
+            "vendor": "mysql",
+            "external_name": "mysql",
+            "image": "mysql/mysql-server:5.5",
+            "min_RAM_mb": 512,
+            "min_disk_gb": 1,
+            "min_VCPU": 1,
+            "platform": "linux-x86_64",
+            "workload_type": "container",
+            "capabilities": ["ALL"],
+            "depends_on": [],
+            "affinity": [],
+            "labels": ["mysql"],
+            "min_instances": 1,
+            "max_instances": 1,
+            "retry_count": 5,
+            "service_ports": [
+                {
+                    "name": "mysql",
+                    "protocol": "TCP",
+                    "source_port": 3306,
+                    "target_port": 3306,
+                    "public": true
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "description": "MYSQL_ROOT_PASSWORD",
+                    "default": "root123",
+                    "example": "root123",
+                    "required": true,
+                    "secret": false
+                }
+            ]
+        }
+    ]
+}
